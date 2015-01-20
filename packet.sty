@@ -1,0 +1,90 @@
+\usepackage{amsmath,amsfonts, amsthm}
+\usepackage{yfonts}
+\usepackage{amsrefs}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{esint}
+\usepackage{harpoon}
+\usepackage{stmaryrd}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{makeidx}
+\makeindex
+
+\definecolor{AuburnOrange}{RGB}{221,85,12}
+\definecolor{AuburnBlue}{RGB}{3,36,77}
+\definecolor{AuburnSecondaryBlue}{RGB}{73,110,156}
+\definecolor{AuburnSecondaryOrange}{RGB}{246,128,38}
+\definecolor{AlabamaCrimson}{RGB}{163,38,65}
+\definecolor{LSUpurple}{RGB}{70,29,124}
+\definecolor{VanderbiltGold}{RGB}{207,181,59}
+
+\usepackage[pdfpagelabels]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=AuburnSecondaryOrange}
+
+% \usepackage[tracking]{microtype}
+% \UseMicrotypeSet{all}
+% \SetTracking[spacing = {35*,0*,0*}]{encoding = *}{7}
+% \linespread{1.025}
+
+\def\scaleint#1{\vcenter{\hbox{\scaleto[3ex]{\displaystyle\int}{#1}}}}
+\def\bs{\!\!}
+
+\renewcommand{\arraystretch}{1.5}
+
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+
+\pagestyle{fancy} \headheight 14.49998pt
+
+\newcommand{\tstamp}{\today}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\chaptermark}[1]{\markright{#1}}
+
+\lhead[\fancyplain{}{Clontz \thepage}]         {\fancyplain{}{\scshape\nouppercase{\rightmark}}}
+
+\chead[\fancyplain{}{}]
+{\fancyplain{}{}}
+
+
+\rhead[\fancyplain{}{Calculus III Study Notes}]       {\fancyplain{}{Clontz \thepage}}
+
+\lfoot[\fancyplain{}{Auburn University}]                 {\fancyplain{\tstamp}{\tstamp}}
+
+\cfoot[\fancyplain{\thepage}{}]         {\fancyplain{\thepage}{}}
+
+\rfoot[\fancyplain{\tstamp} {\tstamp}]  {\fancyplain{}{Auburn University}}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{recall}[theorem]{Recall}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\harpvec}[1]{\overrightharp{\ensuremath{\mathbf{#1}}}}
+\newcommand*{\threevec}[3]{\ensuremath{\left\langle #1, #2, #3 \right\rangle}}
+\newcommand*{\twovec}[2]{\ensuremath{\left\langle #1, #2 \right\rangle}}
+\newcommand*{\unitvec}[1]{\ensuremath{\mathbf{\widehat{#1}}}}
+\newcommand{\veci}{\ensuremath{\mathbf{\widehat{i}}}}
+\newcommand{\vecj}{\ensuremath{\mathbf{\widehat{j}}}}
+\newcommand{\veck}{\ensuremath{\mathbf{\widehat{k}}}}
+\newcommand{\ds}{\ensuremath{\displaystyle}}
+
+
+\renewcommand{\chaptername}{Packet}
+
+\newenvironment{solution}{\paragraph{Solution.}}{\hfill{\small$\lozenge$}}
+\newenvironment{suggestedHW}{\small\it\noindent Textbook Practice Problems: }{\normalsize\rm}
