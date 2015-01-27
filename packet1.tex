@@ -1241,4 +1241,271 @@ $21,$ $27,$ $41,$ $42,$ $44$
           \end{solution}
 
 
+
+
+
+
+%% Added by Mr. Clontz on Jan 25, 2015
+
+\setcounter{chapter}{13}
+\setcounter{section}{0}
+
+\section{Vector Functions and Space Curves}
+
+\begin{definition}
+A \textbf{position function} maps a moment in time to a position in 3D
+(or 2D) space.
+It may be defined with \textbf{parametric equations}
+  \[x=x(t), y=y(t), z=z(t)\]
+or with a \textbf{vector function}
+\[\vect{r}(t) = \<x(t),y(t),z(t)\>\]
+
+In either case, $x(t),y(t),z(t)$ are called the \textbf{component functions}
+for the position function. The \textbf{domain} of a position function is
+defined to be the intersection of the domains of its component functions
+(the values for which \textit{every} position function is well-defined).
+\end{definition}
+
+          \begin{problem}
+            Give parametric equations and the corresponding vector function
+            which describe motion on the curve $y=x^2$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Give parametric equations and the corresponding vector function
+            which describe motion on the circle $x^2+y^2=9$.
+            (Hint: $\sin^2 \theta + \cos^2 \theta = 1$.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Give parametric equations and the corresponding vector function
+            which describe motion on the ellipse $4x^2+9y^2=36$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Describe the domain of
+            $\vect{r}(t) = \threevec{t^3}{\ln\left(3-t\right)}{\sqrt{t}}$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+
+
+\begin{definition}
+If $\vect{r}(t) = \threevec{f(t)}{g(t)}{h(t)}$, then the
+\textbf{limit} of $\vect{r}$ as $t$ approaches $a$ is defined to
+be the limit of its component functions:
+\[
+  \lim_{t\to a} \vect{r}(t)
+  =
+  \left\<\lim_{t\to a} f(t), \lim_{t\to a} g(t), \lim_{t\to a} h(t)\right\>
+\]
+\end{definition}
+
+          \begin{problem}
+            Compute the limit
+            $\ds\lim_{t\to -1} \left\<\arctan t, \frac{e^{1+t}}{1-t}\right\>$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Compute the limit
+            $\ds\lim_{t\to \pi/2} \left\<\sin t, \cos t, \cot t\right\>$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Compute the limit
+            $\ds\lim_{t\to 1} \left\<\frac{3t^2-3}{t+1}, \frac{\sin(2t-2)}{2t-2},\frac{3t^2-3}{t-1}\right\>$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+
+
+\begin{definition}
+  The function $\vect{r}(t)$ is \textbf{continuous} if
+  \[\lim_{t\to a}\vect{r}(t) = \vect{r}(a)\]
+  for all $a$ in its domain.
+\end{definition}
+
+\begin{theorem}
+  $\vect{r}(t)$ is continuous exactly when all of its component
+  functions are all continuous.
+\end{theorem}
+
+\begin{suggestedHW}
+  Section 13.1: $7-14, 28, 30$
+\end{suggestedHW}
+
+\section{Derivatives and Integrals of Vector Functions}
+
+\begin{definition}
+  If $\vect{r}(t) = \threevec{f(t)}{g(t)}{h(t)}$ is a vector function
+  where $f,g,h$ are differentiable functions, then the \textbf{derivative}
+  of $\vect{r}(t)$ is defined to be
+  \[
+    \frac{d\vect{r}}{dt}
+    =
+    \vect{r}'(t)
+    =
+    \left\<f'(t),g'(t),h'(t)\right\>
+  \]
+\end{definition}
+
+\begin{definition}
+  For each real number $a$ in the domain of $\vect{r}$ and $\vect{r}'$,
+  $\vect{r}'(a)$ gives a \textbf{tangent vector} to the curve for
+  the position vector $\vect{r}(a)$.
+\end{definition}
+
+          \begin{problem}
+            Compute $\vect{r}'(t)$ given $\vect{r}(t) = \<t^2,3+t\>$.
+            Then plot the curve corresponding to $\vect{r}(t)$ and
+            the point and tangent vectors corresponding to $t=-2$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Compute $\vect{r}'(t)$ given $\vect{r}(t) = \<\sin t, t,\cos t\>$.
+            Then plot the curve corresponding to $\vect{r}(t)$ and
+            the point and tangent vectors corresponding to $t=\pi$.
+            (Hint: This curve is known as a \textbf{helix}.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Compute $\vect{r}'(t)$ given
+            \[
+              \vect{r}(t)
+                =
+              (\ln 2t)\veci + (e^{2t}-2)\vecj + (\arcsin t)\veck
+            \]
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+
+
+\begin{theorem}
+  The usual differentiation rules (e.g. product rule, chain rule) for scalar
+  functions also hold for vector functions:
+  \[\frac{d}{dt} [\vect{C}] = \vect{0}\]
+  \[\frac{d}{dt} [c\vect{u}(t)] = c\vect{u}'(t)\]
+  \[\frac{d}{dt} [f(t)\vect{C}] = f'(t)\vect{C}\]
+  \[\frac{d}{dt} [\vect{u}(t) \pm \vect{v}(t)] = \vect{u}'(t) \pm \vect{v}'(t)\]
+  \[\frac{d}{dt} [f(t)\vect{u}(t)] = f(t)\vect{u}'(t) + f'(t)\vect{u}(t)\]
+  \[\frac{d}{dt} [\vect{u}(t) \cdot \vect{v}(t)] = \vect{u}(t)\cdot\vect{v}'(t) + \vect{u}'(t)\cdot\vect{v}(t)\]
+  \[\frac{d}{dt} [\vect{u}(t) \times \vect{v}(t)] = \vect{u}(t)\times\vect{v}'(t) + \vect{u}'(t)\times\vect{v}(t)\]
+  \[\frac{d\vect{u}}{dt} = \frac{d}{dt} [\vect{u}(f(t))] =\vect{u}'(f(t))f'(t) = \frac{d\vect{u}}{df}\frac{df}{dt}\]
+\end{theorem}
+
+\begin{theorem}
+If $|\vect{r}(t)|=c$ always (the curve overlays a circle centered at
+the origin), then \[\vect{r}(t) \cdot \vect{r}'(t) = 0\]
+\end{theorem}
+
+          \begin{problem}
+            Prove the previous theorem. (Part of the solution has been
+            provided.)
+          \end{problem}
+
+          \begin{solution}
+            Since $|\vect{r}(t)|=c$ and
+            $|\vect{v}|^2=\vect{v}\cdot\vect{v}$, we may differentate
+            both sides of the following equation:
+            \[
+              \vect{r}(t)\cdot\vect{r}(t)=c^2
+            \]
+            \[
+              \frac{d}{dt}\left[\vect{r}(t)\cdot\vect{r}(t)\right]
+              =
+              \frac{d}{dt}\left[c^2\right]
+            \]
+            \[
+              \dots
+            \]
+          \end{solution}
+
+\begin{definition}
+  If $\vect{R}'(t)=\vect{r}(t)$, then $\vect{R}(t)$ is an
+  \textbf{antiderivative} of $\vect{r}(t)$.
+\end{definition}
+
+\begin{definition}
+  The \textbf{indefinite integral} $\ds \int \vect{r}(t) \dvar{t}$ is the collection of all the antiderivatives of $\vect{r}(t)$.
+  \[\int \vect{r}(t) \dvar{t} = \vect{R}(t) + \vect{C}\]
+  \[\int \vect{r}(t) \dvar{t} = \left\<\int x(t) \dvar{t}, \int y(t) \dvar{t}, \int z(t) \dvar{t} \right\> \]
+\end{definition}
+
+          \begin{problem}
+            Give the indefinite integral of
+            $\ds\vect{r}(t) = \left\<\frac{1}{t+2}, \frac{1}{(t+2)^2}, \frac{2t}{t^2+2}\right\>$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{definition}
+  The \textbf{definite integral} $\ds \int_a^b \vect{r}(t) \dvar{t}$ is
+  given by the definite integrals of each component function.
+  \[\int_a^b \vect{r}(t) \dvar{t} = \left\<\int_a^b x(t) \dvar{t}, \int_a^b y(t) \dvar{t}, \int_a^b z(t) \dvar{t} \right\> \]
+  \[\int_a^b \vect{r}(t) \dvar{t} = \vect{R}(b) - \vect{R}(a)\]
+\end{definition}
+
+\begin{theorem}
+  A \textbf{differential vector equation} asks for $\vect{r}(t)$ given
+  $\vect{r}'(t)$ and $\vect{r}(a)$ for some value $a$. Such
+  problems may either be solved by using
+  \[\vect{r}(t)=\int_a^t\vect{r}'(\tau)\dvar\tau+\vect{r}(a)\]
+  or by solving for $\vect{C}$ in the indefinite integral
+  \[\vect{r}(t)=\int \vect{r}'(t) \dvar{t} + \vect{C}\]
+\end{theorem}
+
+          \begin{problem}
+            Find $\vect{r}(t)$ given
+            $\vect{r}'(t) = \left\<\frac{3}{2}\sqrt{t}, 8t, 3t^2+3\right\>$
+            and $\vect{r}(1) = \<1, -3, 6\>$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+
+\begin{suggestedHW}
+  Section 13.2: $9-26, 35-40$
+\end{suggestedHW}
+
 \end{document}
