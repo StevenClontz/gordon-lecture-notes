@@ -47,6 +47,7 @@ $\harpvec{r}(t)$ from $t=a$ to $t=b$ is
             Find the length of the curve given by
             $\vect{r}(t)=\<6t, t^3, 3t^2\>$
             from $t=0$ to $t=3$.
+            (Hint: $9t^4+36t^2+36$ is a perfect square polynomial.)
           \end{problem}
 
           \begin{solution}
@@ -105,6 +106,15 @@ the tangent vectors given by the derivative of the position function:
   \]
 \end{theorem}
 
+          \begin{problem}
+            Find the unit tangent vector to the curve given by
+            $\vect{r}(t)=\<3t^2,2t\>$ at the point where $t=-3$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
 \begin{definition}
   The \textbf{curvature} $\kappa$ of a curve $C$ at a given point is
   the magnitude of the rate of change of $\vect{T}$ with respect to
@@ -159,7 +169,7 @@ the tangent vectors given by the derivative of the position function:
                 \frac{d\vect{T}}{dt}
               \right|
                 =
-              \frac{|\vect{r}'(t)\times\vect{r}''(t)|}{|\vect{r}'(t)|^3}
+              \frac{|\vect{r}'\times\vect{r}''|}{|\vect{r}'|^3}
             \]
             (Some of the solution has been provided.)
           \end{problem}
@@ -205,8 +215,24 @@ the tangent vectors given by the derivative of the position function:
 \end{theorem}
 
           \begin{problem}
-            Prove that $\vect{N}$ is actually normal to the curve by
+            Prove that $\vect{N}$ actually is normal to the curve by
             using a theorem from a previous section. (Hint: $|\vect{T}|=1$.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Plot the curve given by $\vect{r}(t)=\<\cos(2t),\sin(2t)\>$,
+            along with $\vect{T},\vect{N}$ at the point where
+            $t=\frac{\pi}{2}$.
+          \end{problem}
+
+          \begin{problem}
+            Give formuals for $\vect{T},\vect{N}$ in terms of $t$ for
+            the vector function
+            \[\vect{r}(t) = \< \sqrt{2}\sin t,2\cos t,\sqrt{2}\sin t \>\]
           \end{problem}
 
           \begin{solution}
@@ -233,59 +259,124 @@ the tangent vectors given by the derivative of the position function:
 
           \end{solution}
 
-% % \begin{figure}[H]
-% % \centering
-% % \includegraphics[width=1.5in]{TangentNormalBinormal.pdf}
-% % \label{TangentNormalBinormal}
-% % \caption{Frenet-Serret Equations}
-% % \end{figure}
+          \begin{problem}
+          Given the following information about $\vect{r}(t)$ at a point,
+          evaluate the binormal vector $\vect{B}$ and curvature
+          $\kappa$ at that same point:
+            \[\frac{d\vect{r}}{dt}=\<-3,0,3\sqrt{3}\>\]
+            \[\frac{d\vect{T}}{dt}=\<-\sqrt{3},0,-1\>\]
+            \[\vect{T}=\<-\frac{1}{2},0,\frac{\sqrt{3}}{2}\>\]
+            \[\vect{N}=\<-\frac{\sqrt{3}}{2},0,-\frac{1}{2}\>\]
+          \end{problem}
 
+          \begin{solution}
 
-% \begin{definition}[Normal Plane\index{Normal Plane}]
-% The \textbf{Normal Plane} is defined by $\harpvec{N}$ and $\harpvec{B}$.  It represents all vectors that are perpendicular to $\harpvec{T}.$
-% \end{definition}
+          \end{solution}
 
-% \begin{definition}[Osculating (or Kissing) Plane\index{Osculating Plane}]
-% The \textbf{osculating plane} is the plane defined by $\harpvec{T}$ and $\harpvec{N}$.  It represents the plane that most closely fits the curve at that point.
-% \end{definition}
+\begin{definition}
+  A \textbf{right-handed frame} is a group of three unit vectors which
+  are all normal to one another and satisfy the right hand rule.
+\end{definition}
 
-% \begin{definition}[Osculating Circle\index{Osculating Circle}]
-% The \textbf{osculating circle} is the circle in the osculating plane that has the same tangent as the curve $C$ at the point $P$ and lies on the concave side of $C$ with radius $\rho = \frac{1}{\kappa}.$
-% \end{definition}
+\begin{example}
+  $\veci,\vecj,\veck$ and $\vect T,\vect N,\vect B$ are examples
+  of right-handed frames.
+\end{example}
 
-% % \begin{figure}[H]
-% % \centering
-% % \includegraphics[width=1.5in]{OsculatinCircle.pdf}
-% % \label{OsculatingCircle}
-% % \caption{Osculating Circle}
-% % \end{figure}
+\begin{center}
+\includegraphics[width=0.5\linewidth]{assets/tnb.pdf}
+\end{center}
 
-% \begin{problem}
-% Find the equation of the normal plane and the osculating plane of the helix $\harpvec{r}(t) = \threevec{\cos(t)}{\sin(t)}{t}$ at the point $P = \left(0,1,\frac{\pi}{2}\right).$
-% \end{problem}
+\begin{theorem}
+  Any vector is a linear combination of the vectors in a right-handed frame.
+\end{theorem}
 
-% \vfill
+% \begin{suggestedHW}
+%   Section $13.3: 1-6, 17-25, 49,50.$
+% \end{suggestedHW}
 
-% \noindent Suggested Exercises: Section $13.3: 1-6, 17-25, 49,50.$
+\section{Motion in Space, Velocity, and Acceleration}
 
-% \newpage
+\begin{definition}
+The \textbf{velocity} $\vect{v}(t)$ of a particle at time $t$ on a position
+function $\vect{r}(t)$ is its rate of change with respect to $t$.
+\end{definition}
 
-% \section{Motion in Space, Velocity, and Acceleration}
+\begin{definition}
+The \textbf{speed} $|\vect{v}(t)|$ of a particle at time $t$ on a position
+function $\vect{r}(t)$ is the magnitude of its velocity.
+\end{definition}
 
-% \begin{definition}[Velocity, Acceleration, \& Speed\index{Velocity}\index{Speed}\index{Acceleration}]
-% Let $\harpvec{r}(t)$ be a position vector for a particle at time $t$.  Then the \textbf{velocity} of the particle at time $t$ is $\harpvec{v}(t) = \harpvec{r}^\prime(t)$ and the \textbf{acceleration} of the particle at time $t$ is $\harpvec{a}(t) = \harpvec{v}\prime(t) = \harpvec{r}^{\prime\prime}(t).$  The speed of the particle at time $t$ is defined by $\left|\harpvec{v}(t)\right| = \left|\harpvec{r}^\prime(t)\right|.$
-% \end{definition}
+\begin{definition}
+The \textbf{direction} $\vect{T}(t)$ of a particle at time $t$ on a position
+function $\vect{r}(t)$ is the direction of its velocity.
+\end{definition}
 
-% \begin{problem}
-% Given a position vector $\harpvec{r}(t) = \twovec{t^3}{t^2},$ find the velocity, speed, and acceleration at $t = 1$.
-% \end{problem}
+\begin{definition}
+The \textbf{acceleration} $\vect{a}(t)$ of a particle at time $t$ on a position
+function $\vect{r}(t)$ is the rate of change of its velocity with respect to $t$.
+\end{definition}
 
-% \vfill
+\begin{theorem}
+\[
+  \vect{v}(t)=\vect{r}'(t)
+\]
+\[
+  |\vect{v}(t)|=|\vect{r}'(t)|=\frac{ds}{dt}
+\]
+\[
+  \vect{T}(t) = \frac{\vect v}{|\vect v|}
+\]
+\[
+  \vect{a}(t)=\vect{v}'(t)=\vect{r}''(t)
+\]
+\end{theorem}
 
-% \begin{problem}
-% A moving particle starts at an initial position $\harpvec{r}(0) = \threevec{1}{0}{0}$, has initial velocity $\harpvec{v}(0) = \threevec{1}{-1}{1}$, and acceleration is defined by $\harpvec{a}(t) = \threevec{4t}{6t}{1}.$  Find the particle's position and velocity at time $t.$
-% \end{problem}
+\begin{problem}
+  Given a position function $\harpvec{r}(t) = \<t^3,t^2\>$ find its velocity,
+  speed, and acceleration at $t = 1$.
+\end{problem}
 
-% \vfill
+\begin{definition}
+  \textbf{Ideal projectile motion} is an approximation of real-world
+  motion assuming constant acceleration due to gravity in the $y$ direction
+  and no acceleration in the $x$ direction:
+    \[
+      \vect{a}(t) = \<0,-g\>
+    \]
+\end{definition}
+
+\begin{theorem}
+  The velocity and position functions for a particle with initial velocity
+  $\vect{v}_0=\<v_{x,0},v_{y,0}\>$ and beginning at position
+  $P_0=\<x_0,y_0\>$ assuming ideal projectile motion are:
+    \[
+      \vect{v}(t) = \<v_{x,0},-gt+v_{y,0}\>
+    \]
+    \[
+      \vect{r}(t) = \left\<v_{x,0}t+x_0,-\frac{1}{2}gt^2+v_{y,0}+y_0\right\>
+    \]
+\end{theorem}
+
+          \begin{problem}
+            Assume ideal projectile motion and and $g=10\frac{m}{s^2}$.
+            What is the flight time of a projectile shot from the ground
+            at an angle of $\pi/6$ with initial speed $100\frac{m}{s}$?
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Assume ideal projectile motion and and $g=10\frac{m}{s^2}$.
+            What must have been the initial speed of a projectile shot
+            from the ground at an angle of $\pi/3$ if it
+            traveled $60$ meters horizontally after $4$ seconds?
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
 
 \end{document}
