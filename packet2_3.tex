@@ -1,0 +1,98 @@
+\documentclass[letterpaper, twoside, 12pt]{book}
+\usepackage{packet}
+
+
+\begin{document}
+
+\setcounter{chapter}{1}
+
+\chapter{Part 2: Sections 14.4-14.6}
+
+\setcounter{chapter}{14}
+\setcounter{section}{3}
+
+\section{Tangent Planes and Linear Approximations} %14.4
+
+\begin{definition}
+  A \textbf{normal vector} to a surface is a vector normal to
+  any vector tangent to a curve on the surface.
+\end{definition}
+
+\begin{theorem}
+  Let $f(x,y)$ be a function of two variables with continuous partial
+  derivatives, and let $(a,b)$ be a point in the interior of $f$'s
+  domain. Then $\<f_x(a,b),f_y(a,b),-1\>$ is normal to the surface
+  at the point $(a,b,f(a,b))$.
+\end{theorem}
+
+          \begin{problem}
+            OPTIONAL. Prove the previous theorem by using the curves
+            $\vect{r}(t)=\<t,b,f(t,b)\>$ and
+            $\vect{q}(t)=\<a,t,f(a,t)\>$ to yield the tangent vectors
+            $\<1,0,f_x(a,b)\>$ and $\<0,1,f_y(a,b)\>$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{definition}
+  The \textbf{tangent plane} to a surface at a point is the plane passing
+  through that point sharing the same normal vectors as the surface.
+\end{definition}
+
+\begin{theorem}
+  The tangent plane to the surface $z=f(x,y)$ above the point $(a,b)$
+  is given by the equation
+    \[
+      z = f(a,b) + f_x(a,b)(x-a)+f_y(a,b)(y-b)
+    \]
+\end{theorem}
+
+          \begin{problem}
+            Prove the previous theorem.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Find an equation for the plane tangent to the surface
+            $z=4x^2+y^2$ above the point $(1,-1)$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{definition}
+  The \textbf{linearization} $L(x,y)$ of a function $f(x,y)$
+  at the point $(a,b)$ is given by the formula:
+  \[
+    L(x,y) = f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)
+  \]
+\end{definition}
+
+\begin{definition}
+  A function $f$ is \textbf{differentiable} at a point if its linearization
+  at that point approximates the value of the function nearby.
+\end{definition}
+
+\begin{remark}
+  Basically, a differentiable function is one which looks similar to
+  its tangent planes when zoomed in sufficiently far.
+\end{remark}
+
+          \begin{problem}
+            Approximate the value of the differentiable function
+            $f(x,y)=4xy+3y^2$ at $(1.1,-2.05)$ by using its linearization
+            at the point $(1,-2)$.
+            Then use a calculator to approximate $f(1.1,-2.05)$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\end{document}
