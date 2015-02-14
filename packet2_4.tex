@@ -1,0 +1,357 @@
+\documentclass[letterpaper, twoside, 12pt]{book}
+\usepackage{packet}
+
+
+\begin{document}
+
+\setcounter{chapter}{1}
+
+\chapter{Part 2.4: Sections 14.7-14.8}
+
+\setcounter{chapter}{14}
+\setcounter{section}{6}
+
+\section{Maximum and Minimum Values} %14.7
+
+\begin{definition}
+  Let $f$ be a function of many variables defined near the point $P_0$.
+  Then $f$ has a \textbf{local maximum} $f(P_0)$ at $P_0$ if $f(P_0)$ is the
+  largest value of $f$ near $P_0$, and
+  $f$ has a \textbf{local minimum} $f(P_0)$ at $P_0$ if $f(P_0)$ is the smallest
+  value of $f$ near $P_0$.
+  (Local maxima and minimal are also known as local extreme values or
+  local extrema.)
+\end{definition}
+
+\begin{definition}
+  If $P_0$ is a point in the domain of $f$ and
+    \[
+      \nabla f(P_0) = 0 \text{ or } \nabla f(P_0) \text{ DNE}
+    \]
+  then $P_0$ is called a \textbf{critical point}.
+\end{definition}
+
+\begin{theorem}
+  Critical points of a two-variable function occur when the tangent plane
+  is horizontal (because $\<0,0,-1\>$ is a normal vector)
+  or the tangent plane does not exist.
+\end{theorem}
+
+\begin{theorem}
+  The local maximum and minimum values of a function always
+  occur at critical points.
+\end{theorem}
+
+          \begin{problem}
+            Prove that $f(x,y)=x^2+16y^2$ has exactly one local extreme value
+            value by showing that $(0,0)$ is the only critical point
+            for $f$, and then showing that $f(0,0)$ is the minimum value
+            of the function.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{remark}
+  By plotting the graph of $f$ in the previous problem, you can see
+  that $(0,0)$ yields the lowest point on the surface.
+\end{remark}
+
+\begin{definition}
+  The \textbf{saddle points} of $f$ are the critical points which don't yield local extreme values.
+\end{definition}
+
+          \begin{problem}
+            Prove that $(0,0)$ is a saddle point of the function
+            $f(x,y)=4x^2-9y^2$ by first showing that it is a critical point,
+            and then considering the function $f$ restricted to the curves $y=0$
+            and $x=0$ in the $xy$ plane.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{remark}
+  The term ``saddle point'' comes from the fact that the graph near a
+  saddle point often looks like a saddle (such as in the previous problem).
+\end{remark}
+
+\begin{definition}
+  The \textbf{discriminant} of a differentiable two variable function
+  $f$ is the function
+  \[
+    f_D
+      =
+    \begin{array}{|cc|}f_{xx}&f_{xy}\\f_{yx}&f_{yy}\end{array}
+      =
+    f_{xx}f_{yy} - f_{xy}^2
+  \]
+\end{definition}
+
+          \begin{problem}
+            Compute the discriminant of the function
+            $f(x,y)=3x^2y-2y^3+4x$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{theorem}
+  The \textbf{Second Derivative Test} for two-variable functions gives
+  a way to (sometimes) determine if a critical point either yields a
+  local maximum, a local minimum, or a saddle point.
+  Let $(a,b)$ be a critical point of of $f$ where $\nabla f$ is defined.
+    \begin{itemize}
+      \item If $f_D(a,b)>0$ and $f_{xx}(a,b)<0$,
+            then $f(a,b)$ is a local maximum.
+      \item If $f_D(a,b)>0$ and $f_{xx}(a,b)>0$,
+            then $f(a,b)$ is a local minimum.
+      \item If $f_D(a,b)<0$,
+            then $f$ has a saddle point at $(a,b)$.
+      \item If $f_D(a,b)=0$,
+            then the test is inconclusive.
+    \end{itemize}
+\end{theorem}
+
+          \begin{problem}
+            Prove that $f_{xx}$ could be replaced with $f_{yy}$ in the
+            Second Derivative Test by showing that if $f_D(a,b)>0$,
+            then $f_{xx}(a,b)$ and $f_{yy}(a,b)$ are either both positive
+            or both negative.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            In an earlier problem we found that $f(x,y)=x^2+16y^2$ has exactly
+            one critical point $(0,0)$. Use the Second Derivative Test
+            to show that $f(0,0)$ is the minimum value of the function.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Identify all the critical points for
+            $f(x,y)=x^3-6xy+\frac{3}{2}y^2-1$, then use the Second Derivative
+            Test to label each critical point as yielding a local minimum,
+            a local maximum, or a saddle point.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{definition}
+  Let $f$ be a function of many variables.
+  Then $f$ has an \textbf{absolute maximum} $f(P_0)$ at $P_0$ if $f(P_0)$ is
+  the largest value in the range of $f$, and
+  $f$ has an \textbf{absolute minimum} $f(P_0)$ at $P_0$ if $f(P_0)$ is
+  the smallest value in the range of $f$.
+  (Absolute maxima and minimal are also known as the absolute extreme values or
+  absolute extrema.)
+\end{definition}
+
+\begin{theorem}
+  A continuous function $f$ restricted to a closed and bounded domain $D$
+  always has an absolute minimum and absolute maximum value.
+\end{theorem}
+
+\begin{theorem}
+  The only possible points which can yield the absolute value of a function
+  $f$ of two variables $x,y$ on a restricted domain $D\subseteq \mathbb R^2$
+  are:
+  \begin{itemize}
+    \item Critical points of $f$ inside $D$
+    \item Critical points of $f$ restricted to the boundary of $D$
+    \item Corners on the boundary of $D$
+  \end{itemize}
+  The absolute maximum and absolute minimum values may be computed by
+  plugging in all of these candidates into $f$.
+\end{theorem}
+
+\begin{remark}
+  The previous theorem works because it checks all the local extreme values
+  against each other to find the absolute largest and smallest value.
+\end{remark}
+
+          \begin{problem}
+            Find the absolute maximum and minimum value of
+            $f(x,y)=x^2+y^2-2x-2y$ restricted to the region bounded by
+            the triangle with vertices
+            $(0,0)$, $(2,4)$, and $(2,0)$. (Hint: this
+            triangle is given by the curves $y=0$, $y=2x$, and
+            $x=2$.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Find the absolute maximum and minimum value of
+            $f(x,y)=2xy$ restricted to the region bounded by
+            the circle $x^2+y^2=4$. (Hint: find a vector equation $\vect{r}(t)$
+            for this circle and find the critical points of $f(\vect{r}(t))$.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+
+\section{Lagrange Multipliers} %14.8
+
+          \begin{problem}
+            A rancher wants to enclose a rectangular area using the
+            straight edge of a cliff on one side, and barbed wire on
+            the other three sides. If the rancher wants to maximize
+            the area of this rectangle, what are the dimensions of the
+            fence and the maximized area? In other words, find $x,y$ which
+            maximize $A(x,y)=xy$ given the constraint $2x+y=100$, and
+            the value of $A$ for those values.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Plot the constraint $2x+y=100$ from the previous problem in
+            the $xy$-plane, along with the level curves of $A(x,y)=xy$
+            for $k=750,1000,1250,1500$. (Make sure the image includes
+            $x\in[-100,100]$ and $y\in[-100,100]$.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{remark}
+  Notice that the point $(x,y)$ which maximizes the value of $A(x,y)$
+  is where the constraint $2x+y=100$ and the level curve $xy=1250$
+  share the same tangent line (and therefore normal vectors).
+\end{remark}
+
+\begin{theorem}
+  A function
+  $f(P)$ of many variables, constrained by the requirement
+  $g(P)=k$ for some function $g$ and constant $k$, is maximized or
+  minimized at a point $P_0$ where the normal vector to the
+  level curve/surface $f(P)=f(P_0)$ is parallel to the normal vector
+  to the curve/surface $g(P)=k$. Put another way:
+  \[
+    \nabla f = \lambda(\nabla g)
+  \]
+\end{theorem}
+
+\begin{theorem}
+  The \textbf{Method of Lagrange Multiplers} for two-variable functions
+  states that to maximize/minimize $f(x,y)$ on the constraint $g(x,y)=k$,
+  you should solve the system of equations
+    \[
+      f_x(x,y)=\lambda g_x(x,y)
+    \]
+    \[
+      f_y(x,y)=\lambda g_y(x,y)
+    \]
+    \[
+      g(x,y)=k
+    \]
+  where $\lambda$ is an unknown real number,
+  and testing all solutions of $x,y$ to find the maximum
+  and minimum values of $f$.
+\end{theorem}
+
+          \begin{problem}
+            Use the Method of Lagrange Multipliers to solve the first
+            problem of this section. (Tip: to start, use the first
+            two equations and eliminate the variable $\lambda$ since
+            it's not needed for the solution.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Find the minimum surface area of a right circular cylinder
+            with volume equal to $432\pi$ cubic units.
+            (Hint: $V=\pi r^2h$ and $SA=2\pi r(r+h)$.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            OPTIONAL.
+            A river of constant width $10\sqrt{3}\approx 17.32$ meters
+            flows $40$ meters per second from north to south. A swimmer
+            on the west side of the river can swim at a constant
+            $20$ meters per second through still waters, but since the flow
+            of the river is faster than her top speed, this swimmer will
+            unavoidably be pushed downstream if she tries to swim across.
+
+            Use the Method of Lagrange Mutlipliers to prove that if
+            the swimmer sets an angle of $\frac{\pi}{6}=30^\circ$ north of
+            east, then she will minimize the distance she is pushed downstream
+            as she swims from the west riverbank to the east riverbank.
+            (Hint: define $x(\theta,t)$ to be the distance she travels east
+            after $t$ seconds if she sets the angle $\theta$, and define
+            $y(\theta,t)$ to be the distance she travels south
+            after $t$ seconds if she sets the angle $\theta$. Then your
+            constrant is that $x(\theta,t)$ should be the width of the river,
+            although that's actually not needed to solve the puzzle...)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\begin{theorem}
+  The \textbf{Method of Lagrange Multiplers} for three-variable functions
+  states that to maximize/minimize $f(x,y,z)$ on the constraint $g(x,y,z)=k$,
+  you should solve the system of equations
+    \[
+      f_x(x,y,z)=\lambda g_x(x,y,z)
+    \]
+    \[
+      f_y(x,y,z)=\lambda g_y(x,y,z)
+    \]
+    \[
+      f_z(x,y,z)=\lambda g_z(x,y,z)
+    \]
+    \[
+      g(x,y,z)=k
+    \]
+  where $\lambda$ is an unknown real number,
+  and testing all solutions of $x,y,z$ to find the maximum
+  and minimum values of $f$.
+\end{theorem}
+
+          \begin{problem}
+            Find the maximum volume of a rectangular box without a lid
+            which uses $48$ square units of material.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{problem}
+            Find the highest and lowest points which lay on the curve of intersection for the cylinder $x^2+y^2=8$ and the plane
+            $2x+2y+z=16$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+\end{document}
