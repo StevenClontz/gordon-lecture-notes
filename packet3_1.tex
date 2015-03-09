@@ -1,0 +1,202 @@
+\documentclass[letterpaper, twoside, 12pt]{book}
+\usepackage{packet}
+
+
+\begin{document}
+
+\setcounter{chapter}{2}
+
+\chapter{Packet 3.1: Sections 15.1-15.3 and 15.7}
+
+\setcounter{chapter}{15}
+\setcounter{section}{0}
+
+\section{Double Integrals over Rectangles} %15.1
+
+\begin{definition}
+  We define the \textbf{double integral} of a function $f(x,y)$
+  over a region $R$ to be
+    \[
+      \iint_R f(x,y)\dvar{A} =
+      \lim_{n\to\infty}\sum_{i=1}^n f(x_{n,i},y_{n,i})\Delta A_{n,i}
+    \]
+  where for each positive integer $n$ we've defined a way to
+  partition $R$ into $n$ pieces
+    \[
+      \Delta R_{n,1},\Delta R_{n,2},\dots,\Delta R_{n,n}
+    \]
+  where $\Delta R_{n,i}$ has area $\Delta A_{n,i}$, contains the
+  point $(x_{n,i},y_{n,i})$, and
+    \[
+      \lim_{n\to\infty} \max(\Delta A_{n,i}) = 0
+    \]
+\end{definition}
+
+\begin{remark}
+  This basically defines the double integral to be the \textbf{Riemann sum}
+  of a bunch of rectangular box volumes, just as the single definite integral
+  is the Riemann sum of a bunch of rectangle areas. Therefore it represents
+  the net volume between the curve $z=f(x,y)$ and the $xy$-plane above/below
+  $R$.
+\end{remark}
+
+\begin{theorem}
+  For the rectangle
+  \[
+    R: a\leq x\leq b, c\leq y\leq d
+  \]
+  the \textbf{Midpoint Rule} says that
+  \[
+    \iint_R f(x,y)\dvar{A}
+      \approx
+    \sum_{i=1}^m\sum_{j=1}^n f(\overline{x_i},\overline{y_j}) \Delta A
+  \]
+  where $(\overline{x_i},\overline{y_j})$ is the midpoint of
+  the $i\times j$ rectangle.
+\end{theorem}
+
+          \begin{problem}
+            Divide $R : 0\leq x\leq 4, 0\leq y\leq 2 $
+            into four congruent pieces arranged two-by-two,
+            and then use the midpoint rule to approximate the double integral
+            $\ds\iint_R 2x+2y+4 \dvar{A}$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+            % Include the names of everyone in the group who contributed
+            % to solving this problem.
+          \end{contributors}
+
+          \begin{problem}
+            Divide $R : -2\leq x\leq 2, 0\leq y\leq 2 $
+            into four congruent pieces arranged two-by-two,
+            and then use the midpoint rule to approximate the double integral
+            $\ds\iint_R 12x^2y\dvar{A}$
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+            % Include the names of everyone in the group who contributed
+            % to solving this problem.
+          \end{contributors}
+
+          \begin{problem}
+            Divide $R : 0\leq x\leq \pi/2, 0\leq y\leq \pi/2 $
+            into four congruent pieces arranged two-by-two,
+            and then use the midpoint rule to approximate the double integral
+            $\ds\iint_R \cos(x+y)\dvar{A}$
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+            % Include the names of everyone in the group who contributed
+            % to solving this problem.
+          \end{contributors}
+
+
+
+
+\section{Iterated Integrals} %15.2
+
+\begin{definition}
+  If a solid is embedded in $xyz$ space, and $A(x)$ is the area of that
+  solid's cross-section for each $x$-value, then the solid's volume is
+    \[
+      V  = \int_a^b A(x)\dvar{x}
+    \]
+\end{definition}
+
+\begin{theorem}
+  A double integral over a rectangle
+    \[
+      R: a\leq x\leq b, c\leq y\leq d
+    \]
+      can be evaluated using the \textbf{iterated integrals}:
+    \[
+      \iint_R f(x,y)\dvar{A}
+        =
+      \int_{x=a}^{x=b}\left[\int_{y=c}^{y=d} f(x,y)\dvar{y}\right]\dvar{x}
+        =
+      \int_{y=c}^{y=d}\left[\int_{x=a}^{x=b} f(x,y)\dvar{x}\right]\dvar{y}
+    \]
+\end{theorem}
+
+\begin{remark}
+  Iterated integrals are often shortened as follows:
+    \[
+      \int_{a}^{b}\int_{c}^{d} f(x,y)\dvar{y}\dvar{x}
+        =
+      \int_{x=a}^{x=b}\left[\int_{y=c}^{y=d} f(x,y)\dvar{y}\right]\dvar{x}
+    \]
+    \[
+      \int_{c}^{d}\int_{a}^{b} f(x,y)\dvar{x}\dvar{y}
+        =
+      \int_{y=c}^{y=d}\left[\int_{x=a}^{x=b} f(x,y)\dvar{x}\right]\dvar{y}
+    \]
+\end{remark}
+
+\begin{remark}
+  When evaluating iterated integrals, only the innermost $d$-variable
+  acts as a variable, while other variables act as constants.
+  Put another way, find the partial anti-derivatives.
+\end{remark}
+
+          \begin{problem}
+            If $R : 0\leq x\leq 4, 0\leq y\leq 2 $, then write
+            $\ds\iint_R 2x+2y+4 \dvar{A}$
+            as an iterated integral. Then evaluate it, comparing its
+            value to the approximation you found in the previous section.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+            % Include the names of everyone in the group who contributed
+            % to solving this problem.
+          \end{contributors}
+
+          \begin{problem}
+            If $R : -2\leq x\leq 2, 0\leq y\leq 2 $, then write
+            $\ds\iint_R 12x^2y\dvar{A}$
+            as an iterated integral. Then evaluate it, comparing its
+            value to the approximation you found in the previous section.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+            % Include the names of everyone in the group who contributed
+            % to solving this problem.
+          \end{contributors}
+
+          \begin{problem}
+            If $R : 0\leq x\leq \pi/2, 0\leq y\leq \pi/2 $, then write
+            $\ds\iint_R \cos(x+y)\dvar{A}$
+            as an iterated integral. Then evaluate it, comparing its
+            value to the approximation you found in the previous section.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+            % Include the names of everyone in the group who contributed
+            % to solving this problem.
+          \end{contributors}
+
+\end{document}
