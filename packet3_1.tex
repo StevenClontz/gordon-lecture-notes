@@ -223,4 +223,388 @@
             % to solving this problem.
           \end{contributors}
 
+
+
+\section{Double Integrals over General Regions} %15.3
+
+\begin{theorem}
+  A double integral over a \textbf{Type I} region
+  bounded by top and bottom curves
+    \[
+      R: a\leq x\leq b, g(x)\leq y\leq h(x)
+    \]
+      can be evaluated using the iterated integral:
+    \[
+      \iint_R f(x,y)\dvar{A}
+        =
+      \int_{x=a}^{x=b}\left[\int_{y=g(x)}^{y=h(x)} f(x,y)\dvar{y}\right]\dvar{x}
+    \]
+\end{theorem}
+
+\begin{theorem}
+  A double integral over a \textbf{Type II} region
+  bounded by right and left curves
+    \[
+      R: g(y)\leq x\leq h(y), c\leq y\leq d
+    \]
+      can be evaluated using the iterated integral:
+    \[
+      \iint_R f(x,y)\dvar{A}
+        =
+      \int_{y=c}^{y=d}\left[\int_{x=g(y)}^{x=h(y)} f(x,y)\dvar{x}\right]\dvar{y}
+    \]
+\end{theorem}
+
+\begin{remark}
+  Note that you \textit{never} have variables of integration on the
+  outside-most integral in an iterated integral.
+\end{remark}
+
+          \begin{problem}
+            Evaluate $\ds\int_0^4\int_{\sqrt{y}}^2 6x+30y\dvar{x}\dvar{y}$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Evaluate $\iint_R 6xy+3 \dvar{A}$
+            where $R$ is the region between $x=4-y^2$ and $x=y^2-4$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Evaluate $\iint_R 6xy+3 \dvar{A}$
+            where $R$ is the region between $x=4-y^2$ and $x=y^2-4$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Evaluate $\iint_R 1 \dvar{A}$
+            where $R$ is the triangle with vertices $(0,0)$,
+            $(1,1)$, and $(1,2)$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{remark}
+  You cannot blindly switch the bounds of integration to change
+  the order of integration for a non-rectangular
+  region. However, if the region is both Type I and Type II, then the
+  order of integration may be swapped by reinterpreting the region
+  as the opposite type.
+\end{remark}
+
+          \begin{problem}
+            Evaluate the Type I iterated integral
+            $\ds\int_0^1\int_x^1 \frac{2}{\sqrt{4+y^2}}\dvar{y}\dvar{x}$
+            by first rewriting it as a Type II iterated integral.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Evaluate the Type II iterated integral
+            $\ds\int_0^1\int_{\sqrt{y}}^1 3\pi \sin(\pi x^3)\dvar{x}\dvar{y}$
+            by first rewriting it as a Type I iterated integral.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  The area of a region $R$ in the plane is
+  \[A = \iint\limits_R\,dA=\iint\limits_R 1\dvar A\]
+\end{theorem}
+
+          \begin{problem}
+            Express the area of the parallelogram with vertices
+            $(-1,2)$, $(3,2)$, $(4,1)$, $(0,1)$
+            as a double iterated integral.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{definition}
+  The average value of a two-variable function $f$ over a region $R$ is
+  \[
+    \frac{1}{\text{Area of }R}\iint_R f(x,y)\dvar{A}
+  \]
+\end{definition}
+
+          \begin{problem}
+            Express the average value of $f(x,y)=\sin(\frac{x}{2y})$ over
+            the triangle with vertices $(0,1)$, $(1,1)$, $(0,2)$
+            as a double iterated integral.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{definition}
+  The \textbf{centroid} $(\overline{x},\overline{y})$ of a region $R$ is the
+  average position of all the points in $R$.
+\end{definition}
+
+          \begin{problem}
+            Prove that the centroid
+            of a region $R$ is given by the expressions:
+              \[
+                \overline{x}
+                  =
+                \frac{
+                  1
+                }{
+                  \iint_R 1\dvar{R}
+                }
+                  \iint_R x\dvar{R}
+              \]
+              \[
+                \overline{y}
+                  =
+                \frac{
+                  1
+                }{
+                  \iint_R 1\dvar{R}
+                }
+                  \iint_R y\dvar{R}
+              \]
+            (It's okay to prove one of these and say the other follows from
+            basically the same argument.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{remark}
+  Not every region is Type I or Type II.
+\end{remark}
+
+\begin{theorem}
+  If $R$ can be split into two regions $R_1,R_2$, then
+  \[
+    \iint\limits_R f(x,y)\dvar A
+      =
+    \iint\limits_{R_1} f(x,y)\dvar A + \iint\limits_{R_2} f(x,y)\dvar A
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Express $\iint_R xe^{x+y}\dvar{A}$ as the sum of two
+            iterated integrals, where $R$ is the quadrilateral with
+            vertices at $(0,0)$, $(1,1)$, $(2,0)$, and $(1,2)$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+
+
+\setcounter{section}{6}
+\section{Triple Integrals} %15.7
+
+\begin{definition}
+  The \textbf{triple integral} of a function $f(x,y,z)$ over a solid $D$ is
+  given by
+    \[
+      \iiint_D f(x,y,z)\dvar{V} =
+      \lim_{n\to\infty}\sum_{i=1}^n f(x_{n,i},y_{n,i},z_{n,i})\Delta V_{n,i}
+    \]
+  where for each positive integer $n$ we've defined a way to partition
+  $D$ into $n$ pieces
+    \[
+      \Delta D_{n,1},\Delta D_{n,2},\dots,\Delta D_{n,n}
+    \]
+  where $\Delta D_{n,i}$ has volume $\Delta V_{n,i}$,
+  contains the point $(x_{n,i},y_{n,i},z_{n,i})$,
+  and \[\lim_{n\to\infty} \max(\Delta V_{n,i}) = 0\]
+\end{definition}
+
+\begin{theorem}
+  The triple integral over the rectangular box
+    \[
+      D: a_1\leq x\leq a_2, b_1\leq y\leq b_2, c_1\leq z\leq c_2
+    \]
+  can be expressed as the iterated integrals:
+    \[
+      \iiint_D f(x,y,z)\dvar{V}
+        =
+      \int_{a_1}^{a_2}\int_{b_1}^{b_2}\int_{c_1}^{c_2}
+      f(x,y,z)\dvar{z}\dvar{y}\dvar{x}
+    \]
+    \[
+      = \int_{b_1}^{b_2}\int_{c_1}^{c_2}\int_{a_1}^{a_2}
+      f(x,y,z)\dvar{x}\dvar{z}\dvar{y}
+      = \int_{a_1}^{a_2}\int_{c_1}^{c_2}\int_{b_1}^{b_2}
+      f(x,y,z)\dvar{y}\dvar{z}\dvar{x}
+      = \cdots
+    \]
+\end{theorem}
+
+          \begin{problem}
+            Evaluate $\ds\iiint_D 8xz-y^2\dvar{V}$ where
+            $D$ is the unit cube: $0\leq x\leq 1$,
+            $0\leq y\leq 1$, $0\leq z\leq 1$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  If the solid $D$ is bounded by the surfaces
+    \[
+      h_1(x,y)\leq z\leq h_2(x,y)
+    \]
+  and has shadow $R$ in the $xy$-plane, then
+    \[
+      \iiint_D f(x,y,z)\dvar{V}
+        =
+      \iint_R\left[ \int_{h_1(x,y)}^{h_2(x,y)} f(x,y,z) \dvar{z} \right]\dvar{A}
+    \]
+\end{theorem}
+
+\begin{remark}
+  $z$ may be replaced with $x$ or $y$ by changing the orientation to
+  let $x$ or $y$ be ``up''.
+\end{remark}
+
+          \begin{problem}
+            Evaluate
+            $\ds\int_{-1}^1\int_{1+y}^{2+y}\int_0^2 z \dvar{x}\dvar{z}\dvar{y}$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Express $\ds\iiint_D xy^2z \dvar{V}$ as a triple iterated integral,
+            where $D$ is the solid in the first octant bounded by the
+            coordinate planes, $z=1-y^2$, and $x=4$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  The volume of a solid $D$ in $xyz$ space is
+  \[V = \iiint\limits_D\dvar{V}=\iiint\limits_D 1 \dvar{V}\]
+\end{theorem}
+
+          \begin{problem}
+            Express the volume of the pyramid with vertices
+            $(0,0,0)$, $(3,0,0)$, $(0,2,0)$, and $(0,0,1)$
+            as a triple iterated integral.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{definition}
+  The average value of a three-variable function $f$ over a solid $D$ is
+  \[
+    \frac{1}{\text{Volume of }D}\iiint_D f(x,y,z)\dvar{V}
+  \]
+\end{definition}
+
+          \begin{problem}
+            Express the average value of the function $f(x,y,z)=z+xy$
+            over the solid bounded by the surfaces
+            $z=4-x^2-y^2$ and $z=4x^2+4y^2-16$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  If $D$ can be split into two solids $D_1,D_2$, then
+  \[
+    \iiint\limits_D f(x,y,z)\dvar V
+      =
+    \iiint\limits_{D_1} f(x,y,z)\dvar V + \iiint\limits_{D_2} f(x,y,z)\dvar V
+  \]
+\end{theorem}
+
 \end{document}
