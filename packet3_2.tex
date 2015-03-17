@@ -1,0 +1,449 @@
+\documentclass[letterpaper, twoside, 12pt]{book}
+\usepackage{packet}
+
+
+\begin{document}
+
+\setcounter{chapter}{2}
+
+\chapter{Packet 3.2: Sections 15.10, 15.4, 15.8, 15.9}
+
+\setcounter{chapter}{15}
+\setcounter{section}{9}
+
+\section{Change of Variables in Multiple Integrals} %15.10
+
+\begin{remark}
+  An alternate way to write the $u$-substitution rule from Cal I is: if
+  $x(u)$ defines $x$ as a function of $u$, and $x(u)$ transforms the interval
+  $J$ of $u$-values into the interval $I$ of $x$-values, then
+    \[
+      \int_I f(x) \dvar{x}
+        =
+      \int_J f(x(u)) \left|\frac{dx}{du}\right|\dvar{u}
+    \]
+\end{remark}
+
+          \begin{problem}
+            Use the above alternate $u$-sub rule
+            to prove that
+              \[
+                \int_1^2 2xe^{x^2}\dvar{x}
+                  =
+                \int_1^4 e^u\dvar{u}
+                  =
+                e^4-e
+              \]
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{definition}
+  A \textbf{2D transformation}
+  \[
+    \vect{r}(u,v)
+      =
+    \<x(u,v),y(u,v)\>
+  \]
+  transforms points in the $uv$ plane to points in the $xy$ plane.
+\end{definition}
+
+\begin{definition}
+  The \textbf{unit square} is the square with coordinates
+  $(0,0)$, $(1,0)$, $(1,1)$ and $(0,1)$.
+\end{definition}
+
+\begin{definition}
+  The \textbf{unit triangle} is the triangle with coordinates
+  $(0,0)$, $(1,0)$, and $(1,1)$.
+\end{definition}
+
+          \begin{problem}
+            Show that a transformation from the unit square in the $uv$ plane
+            to the square with sides $y=x$, $y=x+4$, $y=-x$,
+            and $y=-x+4$ in the $xy$ plane
+            could satisfy the equations $y=x+4u$ and $y=-x+4v$, and then
+            solve this system to get the transformation
+            $\<x(u,v),y(u,v)\>$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Find a transformation from the unit square in the $uv$ plane
+            to the parallelogram with vertices $(1,0)$, $(2,-1)$,
+            $(4,0)$, and $(3,1)$ in the $xy$ plane.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Find a transformation from the unit triangle in the $uv$ plane
+            to the triangle with vertices $(0,-1)$, $(2,-2)$,
+            and $(-1,0)$ in the $xy$ plane. (Hint: complete the triangle
+            in the $xy$ plane to a parallelogram and then find a transformation
+            from the unit square to that parallelogram.)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Find a transformation from the unit circle $u^2+v^2 = 1$ in
+            the $uv$ plane to the ellipse $4x^2+9y^2=36$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{definition}
+  The \textbf{Jacobian} of a transformation $\vect{r}(u,v)=\<x(u,v),y(u,v)\>$
+  is given by
+    \[
+    \vect{r}_J(u,v) = \frac{\p (x,y)}{\p (u,v)} =
+    \begin{array}{|c c|}
+    \frac{\p x}{\p u} & \frac{\p x}{\p v} \\
+    \frac{\p y}{\p u} & \frac{\p y}{\p v} \\
+    \end{array}
+    \]
+\end{definition}
+
+\begin{theorem}
+  If $\vect{r}(u,v)=\<x(u,v),y(u,v)\>$ transforms the region
+  $G$ in the $uv$ plane to the region $R$ in the $xy$ plane, then
+    \[
+      \iint_R f(x,y) \dvar{A}
+        =
+      \iint_G f(x(u,v),y(u,v)) |\vect{r}_J(u,v)|\dvar{A}
+    \]
+\end{theorem}
+
+          \begin{problem}
+            Evaluate $\iint_R 2x-y\dvar{A}$ using the transformation
+            $\vect{r}(u,v)=\<u+v,2u-v+3\>$ from unit square in the $uv$ plane
+            into the parallelogram $R$ with vertices $(0,3)$, $(1,5)$,
+            $(2,4)$, and $(1,2)$ in the $xy$ plane.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Evaluate $\iint_R e^x\cos(\pi e^x)\dvar{A}$ using the transformation
+            $\vect{r}(u,v)=\<\ln (u+v+1),v\>$ from the unit triangle in
+            the $uv$ plane into the region $R$ bounded by
+            $y=0$, $y=e^x-2$, and $y=\frac{e^x-1}{2}$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{definition}
+  A \textbf{3D transformation}
+  \[
+    \vect{r}(u,v,w)
+      =
+    \<x(u,v,w),y(u,v,w),z(u,v,w)\>
+  \]
+  transforms points in $uvw$ space to points in $xyz$ space.
+\end{definition}
+
+\begin{definition}
+  The \textbf{Jacobian} of a transformation
+    $\vect{r}(u,v,w)
+      =
+    \<x(u,v,w),y(u,v,w),z(u,v,w)\>$
+  is given by
+    \[
+    \vect{r}_J(u,v,w) = \frac{\p (x,y,z)}{\p (u,v,w)} =
+    \begin{array}{|c c c|}
+    \frac{\p x}{\p u} & \frac{\p x}{\p v} & \frac{\p x}{\p w} \\
+    \frac{\p y}{\p u} & \frac{\p y}{\p v} & \frac{\p y}{\p w} \\
+    \frac{\p z}{\p u} & \frac{\p z}{\p v} & \frac{\p z}{\p w}
+    \end{array}
+    \]
+\end{definition}
+
+\begin{theorem}
+  If $\vect{r}(u,v,w)=\<x(u,v,w),y(u,v,w),z(u,v,w)\>$ transforms the solid
+  $H$ in $uvw$ space to the solid $D$ in the $xyz$ space, then
+    \[
+      \iiint_D f(x,y,z) \dvar{V}
+        =
+      \iiint_H f(x(u,v,w),y(u,v,w),z(u,v,w)) |\vect{r}_J(u,v,w)|\dvar{V}
+    \]
+\end{theorem}
+
+
+
+
+\setcounter{section}{3}
+\section{Double Integrals in Polar Coordinates} %15.4
+
+\begin{theorem}
+  The polar coordinate transformation
+  \[
+    \vect{r}(r,\theta)
+      =
+    \<r\cos\theta, r\sin\theta\>
+  \]
+  from polar $G$ into Cartesian $R$ yields
+  \[
+    \iint\limits_R f(x,y)\dvar{A}
+      =
+    \iint\limits_G f(r\cos\theta,r\sin\theta)|r|\dvar{A}
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Prove the previous theorem.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  If the region $R$ in the $xy$ plane is described with polar coordinates,
+  and is bounded by the inside/outside curves
+  $0\leq g(\theta)\leq r\leq h(\theta)$
+  and lines $\alpha\leq\theta\leq\beta$, then
+    \[
+      \iint\limits_R f(x,y)\dvar{A}
+        =
+      \int_\alpha^\beta\int_{g(\theta)}^{h(\theta)}
+      f(r\cos\theta,r\sin\theta) r\dvar{r}\dvar{\theta}
+    \]
+\end{theorem}
+
+          \begin{problem}
+            Evaluate $\ds\iint_R e^{x^2+y^2}\dvar{A}$ where $R$ is the
+            disk with boundary $x^2+y^2=9$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Prove that
+            \[
+              \int_{0}^{\sqrt{3}}\int_{1}^{\sqrt{4-x^2}} 3y\dvar{y}\dvar{x}
+                =
+              \int_{\pi/6}^{\pi/2}\int_{\csc\theta}^2
+              3r^2\sin\theta\dvar{r}\dvar{\theta}
+                =
+              3\sqrt{3}
+            \]
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+
+
+\setcounter{section}{7}
+\section{Triple Integrals in Cylindrical Coordinates} %15.8
+
+\begin{theorem}
+  The cylindrical coordinate transformation
+  \[
+    \vect{r}(r,\theta,z)
+      =
+    \<r\cos\theta, r\sin\theta, z\>
+  \]
+  from cylindrical $H$ into Cartesian $D$ yields
+  \[
+    \iiint\limits_D f(x,y,z)\dvar{V}
+      =
+    \iiint\limits_H f(r\cos\theta,r\sin\theta,z)|r|\dvar{V}
+  \]
+\end{theorem}
+
+\begin{remark}
+  This is equivalent to using the fact that
+  \[
+    \iiint_D f(x,y,z)\dvar{V}
+      =
+    \iint_R\left[ \int_{h_1(x,y)}^{h_2(x,y)} f(x,y,z) \dvar{z} \right]\dvar{A}
+  \]
+  and then interpreting the shadow $R$ in the $xy$ plane with polar
+  coordinates.
+\end{remark}
+
+          \begin{problem}
+            Evaluate $\ds\iiint_D \sqrt{x^2+y^2}\dvar{V}$ where $D$ is the
+            right circular cylinder bounded by $|z|\leq 2$ and $x^2+y^2=1$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Express the volume of the of the solid bounded by the $xy$ plane
+            and $z=1-x^2-y^2$ as a triple integral of the variables
+            $r,\theta,z$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+\section{Triple Integrals in Spherical Coordinates} %15.9
+
+\begin{theorem}
+  The spherical coordinate transformation
+  \[
+    \vect{r}(\rho,\phi,\theta)
+      =
+    \<\rho\sin\phi\cos\theta, \rho\sin\phi\sin\theta, \rho\cos\phi\>
+  \]
+  from spherical $H$ into Cartesian $D$ yields
+  \[
+    \iiint\limits_D f(x,y,z)\dvar{V}
+      =
+    \iiint\limits_H
+    f(\rho\sin\phi\cos\theta, \rho\sin\phi\sin\theta, \rho\cos\phi)
+    \rho^2|\sin\phi|\dvar{V}
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Prove the previous theorem.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  If the solid $D$ in the $xyz$ plane is described with spherical coordinates,
+  and is bounded by the inside/outside surfaces
+  $h_1(\phi,\theta)\leq \rho\leq h_2(\phi,\theta)$,
+  conical surfaces $0\leq g_1(\theta)\leq\phi\leq g_2(\theta)$,
+  and planes $\alpha\leq\theta\leq\beta$, then
+    \[
+      \iiint\limits_D f(x,y,z)\dvar{V}
+        =
+      \int_\alpha^\beta\int_{g_1(\theta)}^{g_2(\theta)}
+      \int_{h_1(\phi,\theta)}^{h_2(\phi,\theta)}
+      f(\rho\sin\phi\cos\theta, \rho\sin\phi\sin\theta, \rho\cos\phi)
+      \rho^2\sin\phi\dvar{\rho}\dvar{\phi}\dvar{\theta}
+    \]
+\end{theorem}
+
+          \begin{problem}
+            Prove that the volume of a sphere of radius $a$ has
+            volume
+              \[
+                \int_{-a}^a
+                \int_{-\sqrt{a^2-x^2}}^{\sqrt{a^2-x^2}}
+                \int_{-\sqrt{a^2-x^2-y^2}}^{\sqrt{a^2-x^2-y^2}}
+                \dvar{z}\dvar{y}\dvar{x}
+                  =
+                \frac{4}{3}\pi a^3
+              \]
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Express the volume of the ``ice cream cone'' shaped solid
+              \[
+                D
+                  =
+                \{
+                  (x,y,z)
+                :
+                  \sqrt{x^2+y^2} \leq z\leq \sqrt{1-x^2-y^2}+1
+                \}
+              \]
+            as a triple iterated integral of the variables $\rho,\phi,\theta$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+
+
+
+
+\end{document}
