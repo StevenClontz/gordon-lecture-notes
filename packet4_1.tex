@@ -205,15 +205,34 @@ If $\vect{r}(t)$ is a parametrization of $C$ for $a \leq t \leq b$, then
           \end{contributors}
 
 \begin{definition}
-The \textbf{line integral of a vector field} $\vect F$ over the curve $C$
-is given by
+The \textbf{line integral of a vector field} $\vect F$
+over the curve $C$ is given by
+  \[
+    \int_C \vect F\cdot\dvar{\vect r} =
+    \lim_{n\to\infty}\sum_{i=1}^n
+    \vect F(\vect{r}_{n,i})\cdot\Delta\vect{C}_{n,i}
+  \]
+where for each positive integer $n$ we've defined a way to approximate $C$
+with $n$ vectors
+  \[
+    \Delta \vect{C}_{n,1},\Delta \vect{C}_{n,2},\dots,\Delta \vect{C}_{n,n}
+  \]
+where $\vect{r}_{n,i}+\Delta \vect{C}_{n,i}=\vect{r}_{n,i+1}$
+and
+  \[
+    \lim_{n\to\infty} \max(|\Delta \vect{C}_{n,i}|) = 0
+  \]
+\end{definition}
+
+\begin{definition}
+The line integral of a vector field $\vect F$ over the curve $C$
+may be computed by
     \[
       \int_C \vect{F}\cdot\dvar{\vect r}
         =
       \int_C \vect{F}\cdot\vect{T}\dvar{s}
     \]
-where $\vect T$ is the unit tangent vector to the curve $C$ at the
-position vector $\vect r_0$.
+where $\vect T$ yields the unit tangent vectors to the curve $C$.
 \end{definition}
 
 \begin{definition}
@@ -225,19 +244,231 @@ If $\vect{r}(t)$ is a parametrization of $C$ for $a \leq t \leq b$, then
     \]
 \end{definition}
 
-          % \begin{problem}
-          %   Prove that
-          %   $\int_C \vect{F}\cdot\d{\vect{r}}
-          %     =
-          %   \int_0^1 (2t+1) $
-          % \end{problem}
+          \begin{problem}
+            Prove that
+            $\int_C \<2x,y-x\>\cdot\dvar{\vect{r}}
+              =
+            \int_0^1 19t-5 \dvar{t}$
+            where $C$ is the line segment given by the vector equation
+            $\vect{r}(t)=\<1-2t,3t\>$ for $0\leq t\leq 1$.
+          \end{problem}
 
-          % \begin{solution}
+          \begin{solution}
 
-          % \end{solution}
+          \end{solution}
 
-          % \begin{contributors}
+          \begin{contributors}
 
-          % \end{contributors}
+          \end{contributors}
+
+\begin{remark}
+  The work done by a force vector field $\vect{F}$ over the curve $C$
+  is given by $\int_C\vect{F}\cdot\dvar{\vect{r}}$.
+\end{remark}
+
+          \begin{problem}
+            Find the work done by the force vector field
+            $\<-3y,3x\>$ moving a particle one rotation counter-clockwise
+            around the unit circle $x^2+y^2=1$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  If $C$ may be split into two curves $C_1$ and $C_2$, then
+  \[
+    \int_C f\dvar{s}
+      =
+    \int_{C_1} f\dvar{s}
+      +
+    \int_{C_2} f\dvar{s}
+  \]
+  and
+  \[
+    \int_C \vect F\cdot\dvar{\vect r}
+      =
+    \int_{C_1} \vect F\cdot\dvar{\vect r}
+      +
+    \int_{C_2} \vect F\cdot\dvar{\vect r}
+  \]
+\end{theorem}
+
+\begin{theorem}
+  If $-C$ is the curve $C$ oriented in the opposite direction, then
+  \[
+    \int_C f\dvar{s}
+      =
+    \int_{-C} f\dvar{s}
+  \]
+  and
+  \[
+    \int_C \vect F\cdot\dvar{\vect r}
+      =
+    - \int_{-C} \vect F\cdot\dvar{\vect r}
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Write a paragraph explaining why a negative appears in the
+            previous theorem for the
+            line integral of a vector field but not for an arclength
+            line integral.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+\section{The Fundamental Theorem for Line Integrals} %16.3
+
+\begin{definition}
+  If $\nabla f=\vect{F}$, then $f$ is a \textbf{potential function}
+  for the \textbf{conservative field} $\vect{F}$.
+\end{definition}
+
+          \begin{problem} %x^2-3yz
+            Prove that $\<2x,-3z,-3y\>$ is a conservative field by
+            finding a potential function $f$ for it. Hint: such an $f$
+            must satisfy that $f=x^2+\Phi_1(y,z)$, $f=-3yz+\Phi_2(x,z)$,
+            and $f=-3yz+\Phi_3(y,z)$ for some functions $\Phi_i$. (Why?)
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  The Fundamental Theorem for Line Integrals:
+  If $C$ is any smooth curve beginning at the point $A$ and ending at the
+  point $B$, then
+  \[
+    \int_C \nabla f\cdot \dvar{\vect{r}} = \left[f\right]_A^B = f(B)-f(A)
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Prove that if $C$ is any smooth \textbf{closed curve}
+            (beginning and ending at the same point), then
+            \[
+              \int_C \nabla f\cdot \dvar{\vect{r}} = 0
+            \]
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Compute $\int_C\<4,z^2,2yz\>\cdot\dvar{\vect r}$ where
+            $C$ is the curve given by
+            $\vect{r}(t)=\<2^t,\sin (\pi t),4t^2\>$ for $0\leq t\leq 1$.
+            Then compute $\int_{C'}\<4,z^2,2yz\>\cdot\dvar{\vect r}$ where
+            $C'$ is the line segment starting at $(1,0,0)$ and ending
+            at $(2,0,4)$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Prove that if $f$ is a potential function for the vector field
+            $\<P,Q,R\>$, then use the mixed derivative theorem to prove that
+            $P_y=Q_x$, $P_z=R_x$, and $Q_z=R_y$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\begin{theorem}
+  $\vect{F}=\<P,Q,R\>$ is a conservative vector field if and only if
+  $P_y=Q_x$, $P_z=R_x$, and $Q_z=R_y$.
+\end{theorem}
+
+          \begin{problem}
+            Prove that
+            $\int_C\<ye^{xy+z},xe^{xy+z},e^{xy+z}\>\cdot\dvar{\vect r}=0$
+            where $C$ is the curve given by
+            $\vect{r}(t)=\<\frac{1}{1+t^2},\cos t,e^{1-t^2}\>$
+            for $-1 \leq t \leq 1$.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+\section{Green's Theorem} %16.4
+
+\begin{theorem}
+  Let $C$ be the boundary of the region $R$ in the $xy$ plane oriented
+  counter-clockwise, and let $\vect{F}$ be a two-dimensional vector field. Then
+  \[
+    \int_C \vect{F}\cdot\dvar{\vect{r}}
+      =
+    \iint_R \left(\frac{\p Q}{\p x}-\frac{\p P}{\p y}\right)\dvar{A}
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Evaluate $\int_C\<x^2+y,x+y\>\cdot\dvar{\vect r}$ where
+            $C$ is the boundary of the unit square oriented counter-clockwise.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+          \begin{problem}
+            Find the work done by a force vector field $\<y,2x\>$ moving an
+            object around the
+            boundary of the triangle with vertices $(1,2)$, $(-1,-2)$, and
+            $(3,-2)$ oriented clockwise.
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
 
 \end{document}
