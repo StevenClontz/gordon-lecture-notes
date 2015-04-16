@@ -71,7 +71,7 @@
   \[
     \int_C \vect{F}\cdot\dvar{\vect{r}}
       =
-    \iint_D (\text{curl }\vect{F}) \cdot \veck \dvar{A}
+    \iint_R (\text{curl }\vect{F}) \cdot \veck \dvar{A}
   \]
 \end{theorem}
 
@@ -158,7 +158,7 @@
   \[
     \int_C \vect{F}\cdot\vect{n}\dvar{s}
       =
-    \iint_D \text{div }\vect{F} \dvar{A}
+    \iint_R \text{div }\vect{F} \dvar{A}
   \]
 \end{theorem}
 
@@ -310,5 +310,195 @@
           \begin{contributors}
 
           \end{contributors}
+
+\begin{definition}
+  An \textbf{orientation} of a surface is a continuous unit
+  vector field normal to the surface.
+\end{definition}
+
+\begin{remark}
+  Orienting a surface is akin to choosing one side or another of the surface.
+\end{remark}
+
+\begin{remark}
+  Examples of non-orientable surfaces are the Mobi\"us strip and Klein bottle.
+\end{remark}
+
+\begin{definition}
+  The \textbf{surface integral} of a vector field $\vect{F}$ over an
+  oriented surface $S$ in $xyz$ space is given by
+  \[
+    \iint_S \vect{F}\cdot\dvar{\vect\sigma}
+      =
+    \iint_S \vect{F}\cdot\vect{n}\dvar\sigma
+      =
+    \iint_R \vect{F}\cdot(\vect{r}_u\times\vect{r}_v)\dvar{A}
+  \]
+  where $\vect n$ is the orientation of the surface and giving
+  its orientation, and
+  $\vect{r}(u,v)$ is an appropriate parameterization from the region $R$ in
+  the $uv$ plane to the surface $S$.
+\end{definition}
+
+\begin{definition}
+  The \textbf{flux} across a closed oriented surface (such as
+  the boundary of a solid) is given by
+  \[
+    \iint_S \vect{F}\cdot\dvar{\vect\sigma}
+  \]
+\end{definition}
+
+          \begin{problem}
+            Use the parameterization
+            \[
+              \vect{r}(\phi,\theta)
+                =
+              \<
+                3\sin\phi\cos\theta,
+                3\sin\phi\sin\theta,
+                3\cos\phi
+              \>
+            \]
+            from $0\leq\phi\leq\pi,0\leq\theta\leq2\pi$ to the sphere
+            $x^2+y^2+z^2=9$ to prove that the flux across it for the
+            vector field $\<x,y,z\>$ is
+            \[
+              \int_0^{2\pi}\int_0^\pi 27\sin\phi \dvar{\phi}\dvar{\theta}
+            \]
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+\section{Stokes' Theorem}%16.8
+
+\begin{theorem}
+  Let $S$ be a surface with orientation $\vect{n}$
+  and with boundary $C$ oriented counter-clockwise with respect to $\vect{n}$.
+  Then
+  \[
+    \iint_S \text{curl }\vect{F}\cdot\dvar{\vect\sigma}
+      =
+    \int_C \vect{F}\cdot\dvar{\vect{r}}
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Let $S$ be the upper hemisphere $z=\sqrt{1-x^2-y^2}$. Use
+            Stokes' Theorem to prove that
+            \[
+              \iint_S \<2x,2y,2z\>\cdot\dvar{\vect\sigma}
+                =
+              \int_0^{2\pi} \cos^3(t) \dvar{t}
+            \]
+            (Hint: what's the curl of $\<z^2,x^2,y^2\>$?).
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+
+\section{Divergence Theorem}%16.8
+
+\begin{theorem}
+  Let $S$ be the boundary of a solid $D$ oriented outwards.
+  Then
+  \[
+    \iint_S \vect{F}\cdot\dvar{\vect\sigma}
+      =
+    \iiint_D \text{div }\vect{F}\dvar{V}
+  \]
+\end{theorem}
+
+          \begin{problem}
+            Let $S$ be the boundary of the unit cube in $xyz$ space.
+            Use the Divergence Theorem to prove that
+            \[
+              \iint_S \<x+y,y^2+z^2,z^3+x^3\>\cdot\dvar{\vect\sigma}
+                =
+              \int_0^1\int_0^1\int_0^1 1+2y+3z^2 \dvar{z}\dvar{y}\dvar{x}
+            \]
+          \end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
+\section{A small remark and puzzle}
+
+\begin{remark}
+  Using derivatives, gradients, curl, and divergence, we may observe that
+  several kinds of integrals may be evaluated by observing how the
+  integrand behaves on the boundary of the domain of integration, and
+  vice versa.
+  \[
+    \int_{[a,b]} f'(x)\dvar{x} = [f(x)]_a^b
+  \]
+  \[
+    \int_C \nabla f\cdot \dvar{\vect r} = [f(P)]_A^B
+  \]
+  \[
+    \iint_R \text{div }\vect{F} \dvar{A}
+      =
+    \int_C \vect{F}\cdot\vect{n}\dvar{s}
+  \]
+  \[
+    \iint_R Q_x-P_y \dvar{A}
+      =
+    \int_C \<P,Q\>\cdot\dvar{\vect r}
+  \]
+  \[
+    \iint_S \text{curl }\vect{F}\cdot\dvar{\vect\sigma}
+      =
+    \int_C \vect{F}\cdot\dvar{\vect{r}}
+  \]
+  \[
+    \iiint_D \text{div }\vect{F}\dvar{V}
+      =
+    \iint_S \vect{F}\cdot\dvar{\vect\sigma}
+  \]
+\end{remark}
+
+\begin{problem}
+  (OPTIONAL)
+  This has nothing to do with the above remark, but here's a puzzle for
+  reading this far.
+
+  Wayne Brady is hosting a gameshow, and you've
+  been called down from the audience to attempt to win fabulous prizes.
+  Wayne gives you the choice of three doors: $A$, $B$, and $C$. He asks
+  you to choose a door, explaining that only one of the three doors holds
+  a prize behind it.
+
+  After you choose, Wayne opens one of the doors that you didn't choose to
+  reveal nothing behind it. He then offers you the opportunity to switch
+  your door with the other unopened door, after which you will immediately
+  be given whatever is behind it. Should you stick with your initial
+  guess, or should you switch, or does it even matter? Why?
+\end{problem}
+
+          \begin{solution}
+
+          \end{solution}
+
+          \begin{contributors}
+
+          \end{contributors}
+
 
 \end{document}
