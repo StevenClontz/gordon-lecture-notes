@@ -1,0 +1,100 @@
+\documentclass[12pt]{exam}
+
+\newcommand{\ds}{\ensuremath{\displaystyle}}
+
+\usepackage{amsmath,amsfonts, amsthm}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{harpoon}
+\renewcommand{\arraystretch}{1.5}
+
+\newcommand{\harpvec}[1]{\overrightharp{\ensuremath{\mathbf{#1}}}}
+\newcommand{\vect}[1]{\harpvec{#1}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+
+\printanswers
+
+\begin{document}
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Calculus III - Spring 2015 - Mr. Clontz - Test 4 Makeup
+}}}
+\end{center}
+\vspace{0.1in}
+\makebox[\textwidth]{
+  Name:\enspace\hrulefill\hrulefill\hrulefill\space
+  Class:\enspace\hrulefill\space
+  Type:\enspace\hrulefill
+}
+
+\vspace{12pt}
+
+\begin{itemize}
+  \item This exam is open-``everything'', provided you do not plagiarize.
+        \textit{Do not leave any unsupported answers!}
+  \item Write your solutions so that a fellow student who has a perfect
+        understanding of previous math classes and packets but
+        has never seen that type of problem before could follow your work.
+  \item Individual Test: You will have 40 minutes to complete this test
+        on your own. You may not communicate with anyone during this period.
+  \item Group Test: You will have 40 minutes to complete an identical test.
+        You may collaborate with your group members during this time. All
+        solutions must still be written by yourself, and may not be directly
+        copied from another student.
+\end{itemize}
+
+\newpage
+
+\begin{questions}
+
+\setcounter{question}{0}
+
+\question[8]
+  Prove that \[\int_C xy\,d{s}=\int_0^{2\pi} 8\sin t\cos t\,d{t}\]
+  where \(C\) is the full counter-clockwise rotation of the circle
+  \(x^2+y^2=4\).
+
+\newpage
+
+\question[7]
+  Prove that
+    \[
+      \int_C \<yz,-x,x+y\>\cdot\,d\vect{r}
+        =
+      % \int_0^{1} \<2t(1-2t),t-1,2-3t\>\cdot\<-1,2,-2\> \,dt
+      %   =
+      \int_0^1 4t^2+6t-6\,dt
+    \]
+  where \(C\) is the line segment from \((1,0,1)\) to \((0,2,-1)\).
+  (Hint: this is \textit{not} a conservative field.)
+
+\newpage
+
+\question[8] % f=2x+3xyz
+  Prove that
+    \[
+      \int_C \<2+3yz,3xz,3xy\>\cdot\,d\vect{r}
+        =
+      2
+    \]
+  where \(C\) is a curve beginning at \((1,2,0)\) and ending at
+  \((2,0,-1)\). (Hint: this \textit{is} a conservative field.)
+
+\newpage
+
+\question[7]
+  Let \(D\) be the solid bounded by the a surface \(S\).
+  Use the Divergence Theorem (section 16.9) to prove that
+    \[
+      \iint_S \<x^2+1,y^2-xz,1+z^2\>\cdot\,d\vect{\sigma}
+        =
+      2\iiint_D x+y+z\,dV
+    \]
+
+
+
+\end{questions}
+
+\end{document}
